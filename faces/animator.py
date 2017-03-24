@@ -14,7 +14,11 @@ class Animator(object):
         self._face = face
 
     def play(self, animation):
-        return animation(face)
+        """ 
+        Run a single animation 
+
+        """
+        return animation(self._face)
 
     def play_sequence(self, *sequence):
         """
@@ -22,7 +26,7 @@ class Animator(object):
 
         """
         for animation in sequence:
-            animation(face)
+            animation(self._face)
 
     def play_series(self, *series):
         """

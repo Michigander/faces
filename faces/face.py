@@ -6,13 +6,13 @@ class Face(object):
 
     """
 
-    def __init__(self, filename):
+    def __init__(self, data):
         """
         Constructor
 
         """
 
-        self._face_array = np.fromfile(filename)
+        self._face_array = data
 
     def get_face_array(self):
         """

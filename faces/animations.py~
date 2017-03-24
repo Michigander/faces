@@ -1,0 +1,4 @@
+
+def some_animation(face): 
+    print 'running some_animation on: '
+    print face 
