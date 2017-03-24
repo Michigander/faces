@@ -13,6 +13,9 @@ class Animator(object):
         """
         self._face = face
 
+    def play(self, animation):
+        return animation(face)
+
     def play_sequence(self, *sequence):
         """
         Run animations in order
