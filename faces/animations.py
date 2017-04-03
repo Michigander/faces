@@ -1,4 +1,9 @@
+def describe(face): 
 
-def some_animation(face): 
-
-    print face 
+    print face
+    
+    print face.shape
+    
+    print face.size
+    
+    print face.dtype

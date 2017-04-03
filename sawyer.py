@@ -1,6 +1,7 @@
 import faces
 from faces import animations
 import numpy as np
+import cv2
 
 def main():
     """
@@ -8,7 +9,8 @@ def main():
 
     """
     print '[*] building face data: '
-    face_data = np.array([['1', '2', '3', '4'], ['7', '8', '9', '10'], [ '11', '12','13', '14']])
+    #face_data = np.array([['1', '2', '3', '4'], ['7', '8', '9', '10'], [ '11', '12','13', '14']])
+    face_data = cv2.imread('./img/sawyer/sawyer-eyes-closed.png')
     print '[*] done.'
 
     print '[*] building face ...'
@@ -20,7 +22,7 @@ def main():
     print '[*] done.'
 
     print '[*] running single ...'
-    animator.play(animations.some_animation)
+    animator.play(animations.describe)
     print '[*] done.'
 
 if __name__ == '__main__':
