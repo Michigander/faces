@@ -11,12 +11,42 @@ class Face(object):
         Constructor
 
         """
-
         self._face_array = data
 
-    def get_face_array(self):
+
+    def get(self):
         """
-        Return the current face.
+        Return the face array.
 
         """
         return self._face_array
+
+    def about():
+        """
+        Return statistics about face.
+
+        """
+        return {
+            "shape" : self._face_array.shape,
+            "size" : self._face_array.size,
+            "dtype" : self._face_array.dtype
+        }
+
+
+    def wink_right(face):
+        """
+        Blink right eye
+
+        """
+
+    def wink_left(face):
+        """
+        Blink left eye.
+
+        """
+
+    def blink(face):
+        """
+        Blink both eyes.
+
+        """
