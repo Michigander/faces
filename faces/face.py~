@@ -1,5 +1,4 @@
 import numpy as np
-from scipy import misc, ndimage
 
 class Face(object):
     """
@@ -7,16 +6,15 @@ class Face(object):
 
     """
 
-    def __init__(self, filepath):
+    def __init__(self, data):
         """
         Constructor
 
         """
+        self._face_array = data
 
-        # read image as numpy array
-        self._face_array = misc.imread(filepath)
 
-    def get_data(self):
+    def get(self):
         """
         Return the face array.
 
@@ -33,3 +31,22 @@ class Face(object):
             "size" : self._face_array.size,
             "dtype" : self._face_array.dtype
         }
+
+
+    def wink_right(face):
+        """
+        Blink right eye
+
+        """
+
+    def wink_left(face):
+        """
+        Blink left eye.
+
+        """
+
+    def blink(face):
+        """
+        Blink both eyes.
+
+        """
