@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from skimage import measure, io, color
 
+import engine
+
 class Face:
     """ Represent the face as an array of pixels from an image. """
 
@@ -20,7 +22,7 @@ class Face:
         # set components
         self._features = generate_features(self._contours)
 
-    def get_description(self):
+    def describe(self):
         """ Return statistics about face. """
 
         return {
@@ -28,11 +30,6 @@ class Face:
             "size" : self._face_array.size,
             "dtype" : self._face_array.dtype
         }
-
-    def get_contours(self):
-        """ Provides the contours of the face. """
-
-        return self._contours
 
     def generate_contours(self):
         """ Generates the contours for current face """
@@ -43,11 +40,10 @@ class Face:
         # find contours
         return measure.find_contours(face_grayscale, 0.8)
 
-
     def show_contours(self):
         """ Show face in a window """
 
-        # configure 
+        # configure
         fig, ax = plt.subplots()
 
         # show
