@@ -1,5 +1,7 @@
 # faces
-Exploring the construction of a face animation api with Python
+This is an exploratory project in python.
+1. load a picture of a face
+2. use the faces api to control individual components, and compose larger actions
 
 ## motivation
 We want to provide a set of functions for controlling a face.
@@ -28,7 +30,7 @@ the image is published to the head display.
 
 ## structure
 
-## ideas 
-Here, we present some ideas on the design and implementation of our robot face. 
+## ideas
+Here, we present some ideas on the design and implementation of our robot face.
 
-It seems that the face may be better implemented as an interface to be extended and implemented. For example, Sawyer would extend face and implement its low-level animation methods. 
+It seems that the face may be better implemented as an interface to be extended and implemented. For example, Sawyer would extend face and implement its low-level animation methods.
