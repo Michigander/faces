@@ -30,32 +30,3 @@ class Face:
             "size" : self._face_array.size,
             "dtype" : self._face_array.dtype
         }
-
-    def generate_contours(self):
-        """ Generates the contours for current face """
-
-        # reduce dimenstion
-        face_grayscale = color.rgb2gray(self._face_array)
-
-        # find contours
-        return measure.find_contours(face_grayscale, 0.8)
-
-    def show_contours(self):
-        """ Show face in a window """
-
-        # configure
-        fig, ax = plt.subplots()
-
-        # show
-        ax.imshow(self._face_array, interpolation='nearest', cmap=plt.cm.gray)
-
-        # plot
-        for n, contour in enumerate(self._contours):
-            print('contour #', n, ' -> ', contour)
-            ax.plot(contour[:,1], contour[:,0], linewidth=2)
-
-        ax.axis('image')
-        ax.set_xticks([])
-        ax.set_yticks([])
-
-        plt.show()
