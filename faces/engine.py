@@ -1,6 +1,11 @@
+"""engine.
++ generates the face
++ generates the nervous system
++ handles sensory i/o
 
+"""
 def generate_contours(self):
-    """ Generates the contours for current face """
+    """Generates the contours for current face """
 
     # reduce dimenstion
     face_grayscale = color.rgb2gray(self._face_array)

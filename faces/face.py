@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from skimage import measure, io, color
 
 import engine
+import brain
 
 class Face:
     """ Represent the face as an array of pixels from an image. """
@@ -13,20 +14,17 @@ class Face:
         # set face path
         self._path = filepath
 
-        # load face array
-        self._face_array = io.imread(self._path)
-
-        # set contours
-        self._contours = generate_contours(self._face_array)
+        # image -> matrix
+        self._matrix = io.imread(self._path)
 
         # set components
-        self._features = generate_features(self._contours)
+        self._features = engine.generate_features(self._contours)
 
     def describe(self):
         """ Return statistics about face. """
 
         return {
-            "shape" : self._face_array.shape,
-            "size" : self._face_array.size,
-            "dtype" : self._face_array.dtype
+            "shape" : self._matrix.shape,
+            "size" : self._matrix.size,
+            "dtype" : self._matrix.dtype
         }

@@ -1,17 +1,11 @@
 from .context import faces
 
 def main():
-    """
-    Use the Animator to run animations on a Face formed from a sawyer robot face image.
+    """Animate an image of Sawyer-the-robot's face. """
 
-    """
-    print '[*] building face ... '
-    sawyer = new faces.Face('./img/sawyer/sawyer-eyes-closed.png')
-    print '[*] done.'
+    Sawyer = faces.Face('../data/sawyer.png')
 
-    print '[*] blinking eyes ... '
-    sawyer.blink()
-    print '[*] done.'
-
+    Sawyer.blink()
+    
 if __name__ == '__main__':
     main()
